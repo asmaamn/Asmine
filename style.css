@@ -1,0 +1,482 @@
+/* style.css - Style ASMINE : Élégant et Lumineux (Texte Logo & Nav simplifiée) */
+
+/* --- NOUVELLE PALETTE ET TYPOGRAPHIE --- */
+:root {
+    /* Couleurs de fond poudrées/chaudes (dominantes) */
+    --color-body-bg: #F9F0EB; 
+    --color-dark-bg: #000000;
+    
+    /* Couleurs de texte */
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+
+    /* Couleur d'Accent Principal (Rose Gold/Cuivré) */
+    --color-accent-gold: #B87333; 
+    --color-accent-darker: #5A2D3C; /* Bordeaux/Terre pour le contraste */
+    
+    /* Polices */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+/* --- Réinitialisation & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans); 
+    background-color: var(--color-body-bg); 
+    color: var(--color-text-dark); 
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    font-family: var(--font-serif); 
+    font-weight: 700;
+}
+
+h3, h4 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text-dark);
+}
+
+/* --- 1. Top Bar (La barre noire supérieure simplifiée) --- */
+.top-bar {
+    background-color: var(--color-dark-bg);
+    padding: 8px 5%;
+}
+
+.top-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+    gap: 25px;
+    align-items: center;
+}
+
+.top-bar a {
+    color: var(--color-text-light);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.top-bar a:hover {
+    opacity: 1;
+}
+
+/* --- 1.1 Dropdown (Maintenu si nécessaire, mais retiré de la top-bar) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-dark-bg);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100;
+    top: 100%; 
+    left: 0;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: var(--color-text-light);
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--color-accent-gold);
+    color: var(--color-dark-bg);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+
+/* --- 2. Main Header (Nav principale) --- */
+.main-header {
+    background-color: var(--color-body-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Style du Logo Texte --- */
+.text-logo {
+    font-family: var(--font-serif); 
+    font-size: 1.8em;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-text-dark); 
+    margin: 0;
+}
+
+.logo-container {
+    height: auto; 
+    /* Les styles de l'ancienne image logo sont retirés */
+}
+
+.main-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-links a {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.icons a {
+    margin-left: 20px;
+    font-size: 1.1em;
+}
+
+/* --- 3. Hero Section (Première bannière) --- */
+.hero-section {
+    position: relative;
+    max-width: 1400px;
+    margin: 30px auto;
+    height: 500px; 
+    overflow: hidden;
+    background-color: var(--color-dark-bg); 
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.7; 
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--color-text-light);
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+    z-index: 20; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    margin-bottom: 25px;
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Bouton principal (Rose Gold rempli) */
+.btn-primary, .btn-primary-alt {
+    display: inline-block;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9em;
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-light);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover, .btn-primary-alt:hover {
+    background-color: var(--color-accent-darker);
+}
+
+
+/* --- 4. Section Caractéristiques (Free Shipping, etc.) --- */
+.features-section {
+    padding: 40px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+}
+
+.feature-item {
+    padding: 0 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+.feature-item h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* --- 5. Bannière Intermédiaire (The Art bijoiux Refetiens) --- */
+.secondary-banner {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.banner-box {
+    position: relative;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.5); 
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-light);
+    text-align: center;
+    z-index: 20;
+}
+
+.banner-content h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--color-accent-gold);
+}
+
+
+/* --- 6. Section Texte Bas de Page --- */
+.text-section {
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-box {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 40px;
+    background-color: var(--color-text-light); 
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.text-box h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.btn-learn {
+    color: var(--color-accent-gold);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85em;
+    border-bottom: 1px solid var(--color-accent-gold);
+    padding-bottom: 2px;
+    transition: color 0.3s;
+}
+
+.small-text-quote {
+    font-style: italic;
+    font-size: 0.8em;
+    color: #999;
+    padding-bottom: 20px;
+}
+
+
+/* --- 7. Section Produits (Our Collection) --- */
+.collection-section {
+    padding: 40px 5% 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.collection-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    margin-bottom: 15px;
+    background-color: var(--color-text-light); 
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.product-item h4 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.product-item .price {
+    color: var(--color-accent-darker);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.link-learn {
+    font-size: 0.8em;
+    color: var(--color-text-dark);
+    border-bottom: 1px solid var(--color-text-dark);
+    padding-bottom: 2px;
+}
+
+.link-learn:hover {
+    color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
+}
+
+/* --- 8. Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--color-body-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.85em;
+    color: #666;
+}
+
+
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    
+    /* Cacher les liens et icônes principaux sur tablette/mobile pour simplifier */
+    .main-links {
+        display: none; 
+    }
+    
+    .main-nav {
+        justify-content: space-between; 
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        left: 5%;
+        right: 5%;
+        max-width: 90%;
+    }
+    .hero-content h2 {
+        font-size: 2em;
+    }
+    .feature-grid {
+        flex-direction: column; 
+        border: none;
+    }
+    .feature-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; 
+    }
+    .text-box {
+        padding: 20px;
+    }
+    
+    .top-bar ul {
+        gap: 10px;
+    }
+    
+    .top-bar a {
+        font-size: 0.7em;
+    }
+    
+    .icons {
+        display: none; /* Cacher les icônes sur le plus petit écran */
+    }
+}
