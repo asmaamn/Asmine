@@ -1,807 +1,808 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ASMINE — Joaillerie Minimaliste & Moderne en Acier Inoxydable</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASMINE — Joaillerie Minimaliste & Moderne en Acier Inoxydable</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <style>
-        /* ======================================= */
-        /* === NOUVELLE PALETTE DE COULEURS LUXE === */
-        /* ======================================= */
-        :root {
-            --main-bg: #fcfaf8;             /* Blanc Cassé / Crème Pâle (Très Clair) */
-            --text-color: #2b2e35;          /* Gris Anthracite Froid (Texte Principal) */
-            --accent: #8e7a6f;              /* Or Rose Doux / Taupe (Accent Principal - Sophistiqué) */
-            --secondary-accent: #e6f2ee;    /* Vert Menthe Pâle (Garde un contraste doux) */
-            --light-grey: #e9e9e9;          /* Gris très clair/Séparateurs */
-            --sub-text: #666666;            /* Couleur pour texte secondaire/footer */
-            --dark-overlay: rgba(43, 46, 53, 0.3); /* Overlay Hero plus sombre */
-            --highlight-text: #fefcfb;      /* Texte clair pour survol sombre */
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* ======================================= */
+        /* === NOUVELLE PALETTE DE COULEURS LUXE === */
+        /* ======================================= */
+        :root {
+            --main-bg: #fcfaf8;             /* Blanc Cassé / Crème Pâle (Très Clair) */
+            --text-color: #2b2e35;          /* Gris Anthracite Froid (Texte Principal) */
+            --accent: #8e7a6f;              /* Or Rose Doux / Taupe (Accent Principal - Sophistiqué) */
+            --secondary-accent: #e6f2ee;    /* Vert Menthe Pâle (Garde un contraste doux) */
+            --light-grey: #e9e9e9;          /* Gris très clair/Séparateurs */
+            --sub-text: #666666;            /* Couleur pour texte secondaire/footer */
+            --dark-overlay: rgba(43, 46, 53, 0.3); /* Overlay Hero plus sombre */
+            --highlight-text: #fefcfb;      /* Texte clair pour survol sombre */
+        }
 
-        /* --- Reset & Global --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* --- Reset & Global --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--main-bg); 
-            color: var(--text-color);
-            line-height: 1.6;
-            font-weight: 400;
-            font-size: 16px;
-        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--main-bg); 
+            color: var(--text-color);
+            line-height: 1.6;
+            font-weight: 400;
+            font-size: 16px;
+        }
 
-        /* --- Global Links & Buttons --- */
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s ease-in-out;
-        }
-        a:hover { color: var(--accent); } /* Hover avec l'Or Rose Doux */
+        /* --- Global Links & Buttons --- */
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover { color: var(--accent); } /* Hover avec l'Or Rose Doux */
 
-        .btn {
-            display: inline-block;
-            padding: 14px 40px; /* Légèrement plus grand */
-            border: 2px solid var(--text-color);
-            color: var(--text-color);
-            text-transform: uppercase;
-            font-size: 13px; /* Plus lisible */
-            font-weight: 600;
-            letter-spacing: 2.5px; /* Légèrement réduit pour l'équilibre */
-            background: transparent;
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
+        .btn {
+            display: inline-block;
+            padding: 14px 40px; /* Légèrement plus grand */
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+            text-transform: uppercase;
+            font-size: 13px; /* Plus lisible */
+            font-weight: 600;
+            letter-spacing: 2.5px; /* Légèrement réduit pour l'équilibre */
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
 
-        .btn:hover {
-            background: var(--text-color);
-            border-color: var(--text-color);
-            color: var(--highlight-text); /* Texte blanc/crème au survol pour un look Premium */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
+        .btn:hover {
+            background: var(--text-color);
+            border-color: var(--text-color);
+            color: var(--highlight-text); /* Texte blanc/crème au survol pour un look Premium */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
 
-        /* Nouveau style pour le bouton d'accent (Or Rose Doux) */
-        .btn-accent-outline {
-            border-color: var(--accent);
-            color: var(--accent); /* Texte de couleur accent */
-            background: transparent;
-        }
-        .btn-accent-outline:hover {
-            background: var(--accent); 
-            color: white;
-            border-color: var(--accent);
-        }
-        
-        /* Conteneur principal des sections (sauf header et hero) */
-        .container { 
-            max-width: 1280px; /* Légèrement plus large */
-            margin: 0 auto;
-            padding: 0 40px; /* Plus de padding horizontal */
-            margin-bottom: 120px;
-        }
-
-
-        /* --- Header (Fixe/Sticky pour un look professionnel) --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px; /* Plus de padding horizontal */
-            background: var(--main-bg);
-            border-bottom: 1px solid var(--light-grey);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Ombre très subtile */
-        }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 30px; /* Plus grand */
-            letter-spacing: 4px; 
-            font-weight: 700; 
-            color: var(--text-color);
-            /* Ajout d'une touche d'accent subtile */
-            text-shadow: 1px 1px 0 var(--accent); 
-        }
-        nav a {
-            margin-left: 50px; /* Plus d'espace entre les liens */
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
-        .header-icons {
-            display: flex;
-            gap: 25px; /* Plus d'espace entre les icônes */
-        }
-        .header-icons a { 
-            font-size: 20px; /* Icônes plus visibles */
-            line-height: 1; 
-        }
-
-        /* --- Menu Hamburger (Mobile) --- */
-        #menu-toggle { display: none; } 
-        .menu-toggle-label { 
-            display: none;
-            font-size: 28px;
-            cursor: pointer;
-            order: 3; /* Placé après les icônes dans le header pour la cohérence */
-        }
-        
-        .mobile-nav {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: var(--main-bg);
-            border-top: 1px solid var(--light-grey);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            padding: 20px 5%;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .mobile-nav a {
-            margin: 12px 0;
-            font-size: 16px;
-            text-transform: uppercase;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-        }
-
-        .mobile-nav-icons {
-            display: flex;
-            gap: 40px;
-            margin-top: 25px;
-        }
-        .mobile-nav-icons a {
-            font-size: 24px;
-            margin: 0;
-        }
-
-        #menu-toggle:checked ~ .mobile-nav {
-            display: flex;
-        }
-        
-        
-        /* === Hero Section (Améliorée) === */
-        .hero {
-            /* Remplacer par une image haute résolution et cohérente avec le luxe/acier inoxydable */
-            /* Suggestion: une main portant un bijou minimaliste sur fond clair ou marbre. */
-            background-image: url('back.jpg'); /* Assurez-vous d'avoir une image pertinente */
-            background-size: cover;
-            background-position: center; 
-            min-height: 80vh; /* Légèrement ajusté */
-            display: flex;
-            align-items: flex-end; /* Texte en bas à gauche pour le look magazine */
-            justify-content: flex-start;
-            padding: 80px 100px; /* Padding interne pour le positionnement */
-            margin-bottom: 120px;
-            text-align: left;
-            position: relative;
-        }
-
-        /* Ajout d'un overlay discret pour assurer la lisibilité du texte */
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to top, var(--dark-overlay), transparent 70%);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            z-index: 2; 
-            color: var(--main-bg); /* Texte blanc/crème pour contraster avec l'image */
-            max-width: 550px;
-            padding: 0; /* Plus de padding de boîte */
-            background-color: transparent; 
-            border: none; 
-            box-shadow: none;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 72px; /* Titre très grand */
-            font-weight: 700;
-            margin-bottom: 30px;
-            line-height: 1.1;
-            letter-spacing: 1px;
-            color: var(--main-bg); /* Couleur inversée */
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Ombre pour la lisibilité */
-            font-style: italic; /* Ajout d'italique pour l'effet luxe */
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: var(--main-bg);
-            margin-bottom: 50px;
-            font-weight: 400;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            letter-spacing: 0.5px;
-        }
-
-        .hero .btn {
-            border-color: var(--main-bg); /* Bordure blanche/crème */
-            color: var(--main-bg);
-            background: transparent;
-        }
-        .hero .btn:hover {
-            background: var(--main-bg); 
-            color: var(--text-color);
-            border-color: var(--main-bg);
-        }
-        
-        /* --- Généralités des Sections --- */
-        .section-title { 
-            margin-bottom: 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-bottom: 1px solid var(--light-grey);
-            padding-bottom: 15px;
-        }
-        
-        .section-title h2 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 44px; /* Plus grand */
-            font-weight: 600; 
-            margin-bottom: 0; 
-            letter-spacing: 1.5px;
-        }
-
-        /* --- Shop by Category (Grille 3 colonnes) --- */
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px; /* Ajusté pour l'espace */
-        }
-
-        .category-item {
-            text-align: center; /* Centrage pour l'élégance */
-            display: block; 
-        }
-        
-        .category-item img {
-            width: 100%;
-            height: 400px; /* Plus de hauteur */
-            object-fit: cover;
-            display: block;
-            margin-bottom: 20px;
-            border-radius: 2px; /* Bords légèrement adoucis (optionnel) */
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-        .category-item:hover img {
-            transform: scale(0.98); /* Léger recul au survol pour un effet de focus */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .category-item h3 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .category-item span {
-            font-size: 13px;
-            color: var(--accent); 
-            display: block;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px; /* Séparer le titre du sous-titre */
-        }
-        
-        /* --- Shop by Shape (Section supprimée pour simplifier et mettre l'accent sur les produits) --- */
-        /* La section 'inspiration' remplacera cette zone dans la structure */
+        /* Nouveau style pour le bouton d'accent (Or Rose Doux) */
+        .btn-accent-outline {
+            border-color: var(--accent);
+            color: var(--accent); /* Texte de couleur accent */
+            background: transparent;
+        }
+        .btn-accent-outline:hover {
+            background: var(--accent); 
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        /* Conteneur principal des sections (sauf header et hero) */
+        .container { 
+            max-width: 1280px; /* Légèrement plus large */
+            margin: 0 auto;
+            padding: 0 40px; /* Plus de padding horizontal */
+            margin-bottom: 120px;
+        }
 
 
-        /* --- Section Inspiration (Plus de photos) --- */
-        .inspiration-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr; /* Image plus large que le texte */
-            gap: 0;
-            margin-top: 0; /* Suppression de la marge top */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ajout d'une ombre subtile */
-            border: 1px solid var(--light-grey); /* Bordure fine pour délimiter */
-        }
+        /* --- Header (Fixe/Sticky pour un look professionnel) --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px; /* Plus de padding horizontal */
+            background: var(--main-bg);
+            border-bottom: 1px solid var(--light-grey);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Ombre très subtile */
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px; /* Plus grand */
+            letter-spacing: 4px; 
+            font-weight: 700; 
+            color: var(--text-color);
+            /* Ajout d'une touche d'accent subtile */
+            text-shadow: 1px 1px 0 var(--accent); 
+        }
+        nav a {
+            margin-left: 50px; /* Plus d'espace entre les liens */
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+        .header-icons {
+            display: flex;
+            gap: 25px; /* Plus d'espace entre les icônes */
+        }
+        .header-icons a { 
+            font-size: 20px; /* Icônes plus visibles */
+            line-height: 1; 
+        }
 
-        .inspiration-img-container {
-            order: 1; /* L'image à gauche par défaut */
-            overflow: hidden;
-            height: 550px; /* Plus de hauteur */
-        }
-        .inspiration-grid img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transition plus douce */
-        }
-        .inspiration-grid img:hover {
-            transform: scale(1.05);
-        }
-        
-        .inspiration-text {
-            order: 2;
-            background: var(--secondary-accent); /* Fond Menthe Pâle */
-            padding: 70px 60px; /* Plus de padding */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .inspiration-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 40px; /* Plus grand */
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: var(--text-color);
-            line-height: 1.2;
-        }
-        
-        .inspiration-text p {
-            font-size: 16px; 
-            color: var(--sub-text); 
-            margin-bottom: 40px;
-        }
+        /* --- Menu Hamburger (Mobile) --- */
+        #menu-toggle { display: none; } 
+        .menu-toggle-label { 
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            order: 3; /* Placé après les icônes dans le header pour la cohérence */
+        }
+        
+        .mobile-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--main-bg);
+            border-top: 1px solid var(--light-grey);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px 5%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            z-index: 999;
+        }
 
-        .inspiration-text .btn {
-            background: var(--accent); 
-            border-color: var(--accent); 
-            color: white;
-            max-width: 320px;
-        }
-        .inspiration-text .btn:hover {
-            background: var(--text-color);
-            color: white;
-            border-color: var(--text-color);
-        }
-        
-        /* --- Bestseller Products (Section produits) --- */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px; /* Légèrement réduit pour l'espace */
-        }
-        
-        .product-card {
-            text-align: left;
-            display: block;
-            border: 1px solid var(--light-grey); /* Bordure légère par défaut */
-            transition: border-color 0.3s ease, box-shadow 0.3s ease; 
-        }
-        
-        .product-card:hover {
-            border-color: var(--accent); 
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Ombre plus visible */
-        }
-        
-        .product-image-container {
-            height: 350px;
-            background: var(--light-grey); 
-            overflow: hidden;
-            position: relative;
-        }
+        .mobile-nav a {
+            margin: 12px 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+        }
 
-        .product-card img {
-            width: 100%;
-            height: 100%;
-            padding: 20px; /* Moins de padding */
-            object-fit: contain;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .product-card:hover img {
-            transform: scale(1.03); 
-        }
+        .mobile-nav-icons {
+            display: flex;
+            gap: 40px;
+            margin-top: 25px;
+        }
+        .mobile-nav-icons a {
+            font-size: 24px;
+            margin: 0;
+        }
 
-        .product-info {
-            padding: 15px 15px 20px; /* Padding interne pour le texte */
-        }
+        #menu-toggle:checked ~ .mobile-nav {
+            display: flex;
+        }
+        
+        
+        /* === Hero Section (Améliorée) === */
+        .hero {
+            /* Remplacer par une image haute résolution et cohérente avec le luxe/acier inoxydable */
+            /* Suggestion: une main portant un bijou minimaliste sur fond clair ou marbre. */
+            background-image: url('back.jpg'); /* Assurez-vous d'avoir une image pertinente */
+            background-size: cover;
+            background-position: center; 
+            min-height: 80vh; /* Légèrement ajusté */
+            display: flex;
+            align-items: flex-end; /* Texte en bas à gauche pour le look magazine */
+            justify-content: flex-start;
+            padding: 80px 100px; /* Padding interne pour le positionnement */
+            margin-bottom: 120px;
+            text-align: left;
+            position: relative;
+        }
 
-        .product-card h3 {
-            font-size: 17px;
-            font-weight: 500;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        /* Ajout d'un overlay discret pour assurer la lisibilité du texte */
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, var(--dark-overlay), transparent 70%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            z-index: 2; 
+            color: var(--main-bg); /* Texte blanc/crème pour contraster avec l'image */
+            max-width: 550px;
+            padding: 0; /* Plus de padding de boîte */
+            background-color: transparent; 
+            border: none; 
+            box-shadow: none;
+        }
 
-        .product-card span {
-            color: var(--accent); /* Prix en couleur accent */
-            font-weight: 600;
-            font-size: 16px;
-            display: block;
-        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px; /* Titre très grand */
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            color: var(--main-bg); /* Couleur inversée */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Ombre pour la lisibilité */
+            font-style: italic; /* Ajout d'italique pour l'effet luxe */
+        }
 
-        /* --- Badge Nouveauté (Optionnel mais Pro) --- */
-        .product-card .badge-new {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--accent);
-            color: white;
-            padding: 5px 10px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* --- Footer (Passe en Gris Anthracite Froid) --- */
-        footer {
-            background: var(--text-color); 
-            color: white;
-            padding: 100px 40px 40px; /* Plus de padding top */
-            margin-top: 100px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 60px; /* Plus d'espace */
-            max-width: 1280px;
-            margin: 0 auto;
-        }
+        .hero p {
+            font-size: 18px;
+            color: var(--main-bg);
+            margin-bottom: 50px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.5px;
+        }
 
-        .footer-logo {
-            color: var(--main-bg); 
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            letter-spacing: 4px; 
-            font-weight: 700; 
-            margin-bottom: 20px;
-        }
-        
-        .footer-col h4 {
-            font-size: 19px;
-            font-weight: 600;
-            margin-bottom: 25px;
-            color: var(--main-bg);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .footer-col a {
-            font-size: 15px;
-            margin-bottom: 12px;
-            color: #d1d1d1; /* Gris plus clair */
-            display: block;
-        }
-        .footer-col a:hover {
-            color: var(--accent);
-        }
-        
-        .copyright {
-            color: #ccc;
-        }
-        
-        .social-links a {
-            color: var(--main-bg); 
-            margin-right: 20px;
-            font-size: 20px;
-        }
-        .social-links a:hover {
-            color: var(--accent);
-        }
+        .hero .btn {
+            border-color: var(--main-bg); /* Bordure blanche/crème */
+            color: var(--main-bg);
+            background: transparent;
+        }
+        .hero .btn:hover {
+            background: var(--main-bg); 
+            color: var(--text-color);
+            border-color: var(--main-bg);
+        }
+        
+        /* --- Généralités des Sections --- */
+        .section-title { 
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--light-grey);
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 44px; /* Plus grand */
+            font-weight: 600; 
+            margin-bottom: 0; 
+            letter-spacing: 1.5px;
+        }
 
-        /* ==================================== */
-        /* === RESPONSIVE MOBILE OPTIMIZATION === */
-        /* ==================================== */
-        
-        @media (max-width: 1200px) {
-            .products-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+        /* --- Shop by Category (Grille 3 colonnes) --- */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px; /* Ajusté pour l'espace */
+        }
 
-        @media (max-width: 992px) {
-            header { 
-                padding: 20px 20px; 
-            }
-            .container { padding: 0 20px; }
+        .category-item {
+            text-align: center; /* Centrage pour l'élégance */
+            display: block; 
+        }
+        
+        .category-item img {
+            width: 100%;
+            height: 400px; /* Plus de hauteur */
+            object-fit: cover;
+            display: block;
+            margin-bottom: 20px;
+            border-radius: 2px; /* Bords légèrement adoucis (optionnel) */
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .category-item:hover img {
+            transform: scale(0.98); /* Léger recul au survol pour un effet de focus */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-item h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .category-item span {
+            font-size: 13px;
+            color: var(--accent); 
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px; /* Séparer le titre du sous-titre */
+        }
+        
+        /* --- Shop by Shape (Section supprimée pour simplifier et mettre l'accent sur les produits) --- */
+        /* La section 'inspiration' remplacera cette zone dans la structure */
 
-            .menu-toggle-label { display: block; } 
-            nav.desktop-nav { display: none; } 
-            .header-icons .search-icon, .header-icons .user-icon { display: none; } 
-            
-            .hero {
-                min-height: 55vh;
-                padding: 40px 40px;
-                align-items: center; /* Texte au centre */
-                justify-content: center;
-                text-align: center;
-            }
-            .hero:before {
-                 /* Overlay simple sur tout l'écran */
-                background: var(--dark-overlay);
-            }
-            .hero h1 { font-size: 52px; }
-            .hero-content { max-width: 100%; }
-            
-            .category-grid, .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-            }
-            .products-grid { gap: 20px; }
-            
-            .inspiration-grid { 
-                grid-template-columns: 1fr; 
-                margin-top: 50px;
-            }
-            .inspiration-img-container { order: 1; height: 350px; }
-            .inspiration-text { order: 2; padding: 40px 20px; }
-            .inspiration-text h3 { font-size: 32px; }
-            
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero { padding: 20px; text-align: center; }
-            .hero h1 { font-size: 36px; margin-bottom: 20px;}
-            .hero p { font-size: 16px; margin-bottom: 30px;}
-            
-            .category-grid, .products-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .section-title { 
-                flex-direction: column; 
-                align-items: flex-start;
-                margin-bottom: 30px;
-            }
-            .section-title h2 { font-size: 36px; margin-bottom: 10px; }
-            
-            .inspiration-img-container { height: 250px; }
 
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-    </style>
+        /* --- Section Inspiration (Plus de photos) --- */
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr; /* Image plus large que le texte */
+            gap: 0;
+            margin-top: 0; /* Suppression de la marge top */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ajout d'une ombre subtile */
+            border: 1px solid var(--light-grey); /* Bordure fine pour délimiter */
+        }
+
+        .inspiration-img-container {
+            order: 1; /* L'image à gauche par défaut */
+            overflow: hidden;
+            height: 550px; /* Plus de hauteur */
+        }
+        .inspiration-grid img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transition plus douce */
+        }
+        .inspiration-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        .inspiration-text {
+            order: 2;
+            background: var(--secondary-accent); /* Fond Menthe Pâle */
+            padding: 70px 60px; /* Plus de padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .inspiration-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px; /* Plus grand */
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+        
+        .inspiration-text p {
+            font-size: 16px; 
+            color: var(--sub-text); 
+            margin-bottom: 40px;
+        }
+
+        .inspiration-text .btn {
+            background: var(--accent); 
+            border-color: var(--accent); 
+            color: white;
+            max-width: 320px;
+        }
+        .inspiration-text .btn:hover {
+            background: var(--text-color);
+            color: white;
+            border-color: var(--text-color);
+        }
+        
+        /* --- Bestseller Products (Section produits) --- */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px; /* Légèrement réduit pour l'espace */
+        }
+        
+        .product-card {
+            text-align: left;
+            display: block;
+            border: 1px solid var(--light-grey); /* Bordure légère par défaut */
+            transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+        }
+        
+        .product-card:hover {
+            border-color: var(--accent); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Ombre plus visible */
+        }
+        
+        .product-image-container {
+            height: 350px;
+            background: var(--light-grey); 
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 100%;
+            padding: 20px; /* Moins de padding */
+            object-fit: contain;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.03); 
+        }
+
+        .product-info {
+            padding: 15px 15px 20px; /* Padding interne pour le texte */
+        }
+
+        .product-card h3 {
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-card span {
+            color: var(--accent); /* Prix en couleur accent */
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+        }
+
+        /* --- Badge Nouveauté (Optionnel mais Pro) --- */
+        .product-card .badge-new {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* --- Footer (Passe en Gris Anthracite Froid) --- */
+        footer {
+            background: var(--text-color); 
+            color: white;
+            padding: 100px 40px 40px; /* Plus de padding top */
+            margin-top: 100px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px; /* Plus d'espace */
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            color: var(--main-bg); 
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            letter-spacing: 4px; 
+            font-weight: 700; 
+            margin-bottom: 20px;
+        }
+        
+        .footer-col h4 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: var(--main-bg);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-col a {
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #d1d1d1; /* Gris plus clair */
+            display: block;
+        }
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            color: #ccc;
+        }
+        
+        .social-links a {
+            color: var(--main-bg); 
+            margin-right: 20px;
+            font-size: 20px;
+        }
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* ==================================== */
+        /* === RESPONSIVE MOBILE OPTIMIZATION === */
+        /* ==================================== */
+        
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            header { 
+                padding: 20px 20px; 
+            }
+            .container { padding: 0 20px; }
+
+            .menu-toggle-label { display: block; } 
+            nav.desktop-nav { display: none; } 
+            .header-icons .search-icon, .header-icons .user-icon { display: none; } 
+            
+            .hero {
+                min-height: 55vh;
+                padding: 40px 40px;
+                align-items: center; /* Texte au centre */
+                justify-content: center;
+                text-align: center;
+            }
+            .hero:before {
+                 /* Overlay simple sur tout l'écran */
+                background: var(--dark-overlay);
+            }
+            .hero h1 { font-size: 52px; }
+            .hero-content { max-width: 100%; }
+            
+            .category-grid, .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .products-grid { gap: 20px; }
+            
+            .inspiration-grid { 
+                grid-template-columns: 1fr; 
+                margin-top: 50px;
+            }
+            .inspiration-img-container { order: 1; height: 350px; }
+            .inspiration-text { order: 2; padding: 40px 20px; }
+            .inspiration-text h3 { font-size: 32px; }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero { padding: 20px; text-align: center; }
+            .hero h1 { font-size: 36px; margin-bottom: 20px;}
+            .hero p { font-size: 16px; margin-bottom: 30px;}
+            
+            .category-grid, .products-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .section-title { 
+                flex-direction: column; 
+                align-items: flex-start;
+                margin-bottom: 30px;
+            }
+            .section-title h2 { font-size: 36px; margin-bottom: 10px; }
+            
+            .inspiration-img-container { height: 250px; }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <a href="/" class="logo" aria-label="ASMINE - Retour à l'accueil">ASMINE</a>
-        
-        <nav class="desktop-nav" aria-label="Navigation Principale">
-            <a href="#bagues">Bagues</a>
-            <a href="#boucles">Boucles d'oreilles</a>
-            <a href="#bracelets">Bracelets</a>
-            <a href="#colliers">Colliers</a>
-            <a href="#nouveautes">Nouveautés</a>
-        </nav>
-        
-        <div class="header-icons">
-            <input type="checkbox" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" />
-            <label for="menu-toggle" class="menu-toggle-label" aria-label="Ouvrir le menu de navigation"><i class="fas fa-bars"></i></label>
-            
-            <a href="#" aria-label="Mon compte" class="user-icon"><i class="fas fa-user"></i></a>
-            <a href="#" aria-label="Recherche" class="search-icon"><i class="fas fa-search"></i></a>
-            <a href="#" aria-label="Panier" class="cart-icon"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-        
-        <nav class="mobile-nav" id="mobile-menu" aria-label="Navigation Mobile">
-            <a href="#bagues">Bagues</a>
-            <a href="#boucles">Boucles d'oreilles</a>
-            <a href="#bracelets">Bracelets</a>
-            <a href="#colliers">Colliers</a>
-            <a href="#nouveautes">Nouveautés</a>
-            <hr style="width: 50%; border-color: var(--light-grey); margin: 15px 0;">
-            <a href="#">L'Univers ASMINE</a>
-            <a href="#">Contact</a>
-            
-            <div class="mobile-nav-icons">
-                <a href="#" aria-label="Mon compte"><i class="fas fa-user"></i></a>
-                <a href="#" aria-label="Recherche"><i class="fas fa-search"></i></a>
-            </div>
-        </nav>
-    </header>
+    <header>
+        <a href="/" class="logo" aria-label="ASMINE - Retour à l'accueil">ASMINE</a>
+        
+        <nav class="desktop-nav" aria-label="Navigation Principale">
+            <a href="#bagues">Bagues</a>
+            <a href="#boucles">Boucles d'oreilles</a>
+            <a href="#bracelets">Bracelets</a>
+            <a href="#colliers">Colliers</a>
+            <a href="#nouveautes">Nouveautés</a>
+        </nav>
+        
+        <div class="header-icons">
+            <input type="checkbox" id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" />
+            <label for="menu-toggle" class="menu-toggle-label" aria-label="Ouvrir le menu de navigation"><i class="fas fa-bars"></i></label>
+            
+            <a href="#" aria-label="Mon compte" class="user-icon"><i class="fas fa-user"></i></a>
+            <a href="#" aria-label="Recherche" class="search-icon"><i class="fas fa-search"></i></a>
+            <a href="#" aria-label="Panier" class="cart-icon"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+        
+        <nav class="mobile-nav" id="mobile-menu" aria-label="Navigation Mobile">
+            <a href="#bagues">Bagues</a>
+            <a href="#boucles">Boucles d'oreilles</a>
+            <a href="#bracelets">Bracelets</a>
+            <a href="#colliers">Colliers</a>
+            <a href="#nouveautes">Nouveautés</a>
+            <hr style="width: 50%; border-color: var(--light-grey); margin: 15px 0;">
+            <a href="#">L'Univers ASMINE</a>
+            <a href="#">Contact</a>
+            
+            <div class="mobile-nav-icons">
+                <a href="#" aria-label="Mon compte"><i class="fas fa-user"></i></a>
+                <a href="#" aria-label="Recherche"><i class="fas fa-search"></i></a>
+            </div>
+        </nav>
+    </header>
 
-    <main>
-        <section class="hero" style="background-image: url('art.jpg' ); width: 600px;">
-            <div class="hero-content">
-                <h1>L'Élégance Minimaliste</h1>
-                <p>
-                    Des pièces d'orfèvrerie en acier inoxydable aux lignes pures, conçues pour durer et pour sublimer votre quotidien.
-                </p>
-                <a href="#bestsellers" class="btn btn-accent-outline">DÉCOUVRIR LES VEDETTES</a>
-            </div>
-        </section>
+    <main>
+        <section class="hero" style="background-image: url('art.jpg' ); width: 600px;">
+            <div class="hero-content">
+                <h1>L'Élégance Minimaliste</h1>
+                <p>
+                    Des pièces d'orfèvrerie en acier inoxydable aux lignes pures, conçues pour durer et pour sublimer votre quotidien.
+                </p>
+                <a href="#bestsellers" class="btn btn-accent-outline">DÉCOUVRIR LES VEDETTES</a>
+            </div>
+        </section>
 
-        <section class="container" id="categories" aria-labelledby="section-categories-title">
-            <div class="section-title">
-                <h2 id="section-categories-title">Collections & Catégories</h2>
-            </div>
-            <div class="category-grid">
-                <a href="#bagues" class="category-item">
-                    <img src="bague.jpg" alt="Image de bagues sculpturales minimalistes">
-                    <span>ASMINE CLASSIC</span>
-                    <h3>Bagues Minimales</h3>
-                </a>
-                <a href="#boucles" class="category-item">
-                    <img src="boucle.jpg" alt="Image de boucles d'oreilles pendantes et épurées">
-                    <span>LIGNES PURES</span>
-                    <h3>Boucles Aériennes</h3>
-                </a>
-                <a href="#bracelets" class="category-item">
-                    <img src="bracelet.jpg" alt="Image de bracelets empilés">
-                    <span>ICONIQUES JONCS</span>
-                    <h3>Bracelets Délicats</h3>
-                </a>
-            </div>
-        </section>
-        
-        
-        <section class="container" id="inspiration" aria-labelledby="inspiration-title">
-            <div class="inspiration-grid">
-                <div class="inspiration-img-container">
-                    <img src="back.jpg" alt="Gros plan sur un bijou porté, soulignant le style minimaliste et la finesse." width="200px">
-                </div>
-                <div class="inspiration-text">
-                    <h3 id="inspiration-title">Notre Engagement : L'Acier Inoxydable</h3>
-                    <p>
-                        L'acier inoxydable est au cœur de notre démarche : non seulement il offre une durabilité et une résistance inégalées, mais il permet également une finition polie et moderne qui s'accorde parfaitement à notre esthétique minimaliste. Des bijoux pensés pour la vie, qui ne craignent ni l'eau, ni le temps.
-                    </p>
-                    <a href="#manifeste" class="btn">DÉCOUVRIR LE SAVOIR-FAIRE</a>
-                </div>
-            </div>
-        </section>
+        <section class="container" id="categories" aria-labelledby="section-categories-title">
+            <div class="section-title">
+                <h2 id="section-categories-title">Collections & Catégories</h2>
+            </div>
+            <div class="category-grid">
+                <a href="#bagues" class="category-item">
+                    <img src="bague.jpg" alt="Image de bagues sculpturales minimalistes">
+                    <span>ASMINE CLASSIC</span>
+                    <h3>Bagues Minimales</h3>
+                </a>
+                <a href="#boucles" class="category-item">
+                    <img src="boucle.jpg" alt="Image de boucles d'oreilles pendantes et épurées">
+                    <span>LIGNES PURES</span>
+                    <h3>Boucles Aériennes</h3>
+                </a>
+                <a href="#bracelets" class="category-item">
+                    <img src="bracelet.jpg" alt="Image de bracelets empilés">
+                    <span>ICONIQUES JONCS</span>
+                    <h3>Bracelets Délicats</h3>
+                </a>
+            </div>
+        </section>
+        
+        
+        <section class="container" id="inspiration" aria-labelledby="inspiration-title">
+            <div class="inspiration-grid">
+                <div class="inspiration-img-container">
+                    <img src="back.jpg" alt="Gros plan sur un bijou porté, soulignant le style minimaliste et la finesse." width="200px">
+                </div>
+                <div class="inspiration-text">
+                    <h3 id="inspiration-title">Notre Engagement : L'Acier Inoxydable</h3>
+                    <p>
+                        L'acier inoxydable est au cœur de notre démarche : non seulement il offre une durabilité et une résistance inégalées, mais il permet également une finition polie et moderne qui s'accorde parfaitement à notre esthétique minimaliste. Des bijoux pensés pour la vie, qui ne craignent ni l'eau, ni le temps.
+                    </p>
+                    <a href="#manifeste" class="btn">DÉCOUVRIR LE SAVOIR-FAIRE</a>
+                </div>
+            </div>
+        </section>
 
 
-        <section class="container" id="bestsellers" aria-labelledby="section-vedette-title">
-            <div class="section-title">
-                <h2 id="section-vedette-title">Nos Créations en Vedette</h2>
-                <a href="#catalogue" class="btn btn-accent-outline">VOIR LE CATALOGUE</a>
-            </div>
-            <div class="products-grid">
-                <a href="#produit-1" class="product-card">
-                    <div class="product-image-container">
-                        <span class="badge-new">Nouveau</span>
-                        <img src="bg.jpg" alt="Bague Aura Or, produit star">
-                    </div>
-                    <div class="product-info">
-                         <h3>Bague Aura</h3>
-                         <span> 20 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-2" class="product-card">
-                    <div class="product-image-container">
-                        <img src="perle.jpg" alt="Boucles Luxe Perle">
-                    </div>
-                    <div class="product-info">
-                         <h3>Boucles Luxe Perle</h3>
-                         <span> 18 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-3" class="product-card">
-                    <div class="product-image-container">
-                        <img src="bra.jpg" alt="Bracelets">
-                    </div>
-                    <div class="product-info">
-                         <h3>Jonc Ligne Pure</h3>
-                         <span>25 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-4" class="product-card">
-                    <div class="product-image-container">
-                        <img src="pe.jpg" alt="Collier en perles">
-                    </div>
-                    <div class="product-info">
-                         <h3>Gouttes Géométriques</h3>
-                         <span>30 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-5" class="product-card">
-                    <div class="product-image-container">
-                        <img src="cl.jpg" alt="Collier Pendentif ">
-                    </div>
-                    <div class="product-info">
-                         <h3>Pendentif</h3>
-                         <span>25 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-6" class="product-card">
-                    <div class="product-image-container">
-                        <img src="sol.jpg" alt="Bague Solitaire Carré">
-                    </div>
-                    <div class="product-info">
-                         <h3>Solitaire </h3>
-                         <span> 25 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-7" class="product-card">
-                    <div class="product-image-container">
-                        <span class="badge-new">Best Seller</span>
-                        <img src="couple.jpg" alt="Créoles Épaisseur">
-                    </div>
-                    <div class="product-info">
-                         <h3>bagues couple</h3>
-                         <span>50 DT</span>
-                    </div>
-                </a>
-                
-                <a href="#produit-8" class="product-card">
-                    <div class="product-image-container">
-                        <img src="cpl.jpg" alt="Bracelet Jonc Diamants Tension">
-                    </div>
-                    <div class="product-info">
-                         <h3>Bracelets couple</h3>
-                         <span>2 800 DT</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-    </main>
+        <section class="container" id="bestsellers" aria-labelledby="section-vedette-title">
+            <div class="section-title">
+                <h2 id="section-vedette-title">Nos Créations en Vedette</h2>
+                <a href="#catalogue" class="btn btn-accent-outline">VOIR LE CATALOGUE</a>
+            </div>
+            <div class="products-grid">
+                <a href="#produit-1" class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-new">Nouveau</span>
+                        <img src="bg.jpg" alt="Bague Aura Or, produit star">
+                    </div>
+                    <div class="product-info">
+                         <h3>Bague Aura</h3>
+                         <span> 20 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-2" class="product-card">
+                    <div class="product-image-container">
+                        <img src="perle.jpg" alt="Boucles Luxe Perle">
+                    </div>
+                    <div class="product-info">
+                         <h3>Boucles Luxe Perle</h3>
+                         <span> 18 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-3" class="product-card">
+                    <div class="product-image-container">
+                        <img src="bra.jpg" alt="Bracelets">
+                    </div>
+                    <div class="product-info">
+                         <h3>Jonc Ligne Pure</h3>
+                         <span>25 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-4" class="product-card">
+                    <div class="product-image-container">
+                        <img src="pe.jpg" alt="Collier en perles">
+                    </div>
+                    <div class="product-info">
+                         <h3>Gouttes Géométriques</h3>
+                         <span>30 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-5" class="product-card">
+                    <div class="product-image-container">
+                        <img src="cl.jpg" alt="Collier Pendentif ">
+                    </div>
+                    <div class="product-info">
+                         <h3>Pendentif</h3>
+                         <span>25 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-6" class="product-card">
+                    <div class="product-image-container">
+                        <img src="sol.jpg" alt="Bague Solitaire Carré">
+                    </div>
+                    <div class="product-info">
+                         <h3>Solitaire </h3>
+                         <span> 25 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-7" class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-new">Best Seller</span>
+                        <img src="couple.jpg" alt="Créoles Épaisseur">
+                    </div>
+                    <div class="product-info">
+                         <h3>bagues couple</h3>
+                         <span>50 DT</span>
+                    </div>
+                </a>
+                
+                <a href="#produit-8" class="product-card">
+                    <div class="product-image-container">
+                        <img src="cpl.jpg" alt="Bracelet Jonc Diamants Tension">
+                    </div>
+                    <div class="product-info">
+                         <h3>Bracelets couple</h3>
+                         <span>60 DT</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-logo">ASMINE</div>
-                <p style="font-size: 15px; color: #ccc;">
-                    Des lignes pures, des matériaux d'exception. La rencontre de l'artisanat et du design moderne.
-                </p>
-                <div style="margin-top: 35px;">
-                    <span style="display: block; font-weight: 500; font-size: 14px; color: var(--main-bg); letter-spacing: 1px;">ACIER INOXYDABLE | GARANTIE 10 ANS</span>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Soutien Client</h4>
-                <a href="#">Aide et Contact</a>
-                <a href="#">FAQ Détaillée</a>
-                <a href="#">Suivi de Commande</a>
-                <a href="#">Livraison et Retours</a>
-            </div>
-            <div class="footer-col">
-                <h4>L'Univers ASMINE</h4>
-                <a href="#">Nouveautés</a>
-                <a href="#">Collection Capsule</a>
-                <a href="#">Le Savoir-Faire</a>
-                <a href="#">Notre Manifeste Éthique</a>
-            </div>
-            <div class="footer-col">
-                <h4>Restons Connectés</h4>
-                <p style="margin-bottom: 25px; font-size: 15px; color: #ccc;">Suivez-nous pour découvrir nos dernières inspirations.</p>
-                <div class="social-links" aria-label="Liens Réseaux Sociaux">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div style="max-width: 1280px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #444; margin-top: 70px; text-align: center; font-size: 14px;">
-                &copy; 2025 ASMINE. Tous droits réservés. | Politique de Confidentialité | Mentions Légales
-            </div>
-        </div>
-    </footer>
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">ASMINE</div>
+                <p style="font-size: 15px; color: #ccc;">
+                    Des lignes pures, des matériaux d'exception. La rencontre de l'artisanat et du design moderne.
+                </p>
+                <div style="margin-top: 35px;">
+                    <span style="display: block; font-weight: 500; font-size: 14px; color: var(--main-bg); letter-spacing: 1px;">ACIER INOXYDABLE | GARANTIE 10 ANS</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Soutien Client</h4>
+                <a href="#">Aide et Contact</a>
+                <a href="#">FAQ Détaillée</a>
+                <a href="#">Suivi de Commande</a>
+                <a href="#">Livraison et Retours</a>
+            </div>
+            <div class="footer-col">
+                <h4>L'Univers ASMINE</h4>
+                <a href="#">Nouveautés</a>
+                <a href="#">Collection Capsule</a>
+                <a href="#">Le Savoir-Faire</a>
+                <a href="#">Notre Manifeste Éthique</a>
+            </div>
+            <div class="footer-col">
+                <h4>Restons Connectés</h4>
+                <p style="margin-bottom: 25px; font-size: 15px; color: #ccc;">Suivez-nous pour découvrir nos dernières inspirations.</p>
+                <div class="social-links" aria-label="Liens Réseaux Sociaux">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div style="max-width: 1280px; margin: 0 auto; padding-top: 30px; border-top: 1px solid #444; margin-top: 70px; text-align: center; font-size: 14px;">
+                &copy; 2025 ASMINE. Tous droits réservés. | Politique de Confidentialité | Mentions Légales
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
+ 
